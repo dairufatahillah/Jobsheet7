@@ -3,39 +3,39 @@ import java.util.Scanner;
 public class Parkir {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int jenis, durasi, total = 0, totalHarian = 0;
+        int Jenis, Durasi, Total = 0, TotalHarian = 0;
 
         while (true) {
-            System.out.print("Masukkan jenis kendaraan (1: Mobil, 2: Motor, 0: Keluar): ");
-            jenis = sc.nextInt();
+            System.out.print("Masukkan jenis kendaraan (1=Mobil, 2=Motor, 0=keluar): ");
+            Jenis = sc.nextInt();
 
-            if (jenis > 2 || jenis < 0) {
+            if (Jenis > 2 || Jenis < 0) {
                 System.out.println("Jenis kendaraan tidak valid. Silakan coba lagi.");
                 System.out.println();
                 continue;
             }
 
-            if (jenis == 0) {
-                System.out.println("Total biaya parkir hari ini: Rp " + totalHarian);
+            if (Jenis == 0) {
+                System.out.println("Total biaya parkir hari ini: Rp " + TotalHarian);
                 break;
             }
 
             System.out.print("Masukkan durasi parkir per jam: ");
-            durasi = sc.nextInt();
+            Durasi = sc.nextInt();
 
-            if (durasi > 5) {
-                total = 12500;
-                totalHarian += total;
+            if (Durasi > 5) {
+                Total = 12500;
+                TotalHarian += Total;
             }
-            else if (jenis == 1) {
-                total = durasi * 3000;
-                totalHarian += total;
+            else if (Jenis == 1) {
+                Total = Durasi * 3000;
+                TotalHarian += Total;
             } else  {
-                total = durasi * 2000;
-                totalHarian += total;
+                Total = Durasi * 2000;
+                TotalHarian += Total;
             }
 
-            System.out.println("Total biaya parkir: Rp " + total);
+            System.out.println("Total biaya parkir: Rp " + Total);
             System.out.println();
         }
         
